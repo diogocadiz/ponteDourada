@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PonteDourada - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ALERT OVERLAY -->
+    <div class="alert-overlay" id="alertOverlay">
+        <div class="alert-box" id="alertBox">
+            <div class="alert-icon" id="alertIcon">⚠️</div>
+            <h3 id="alertTitle">Alerta</h3>
+            <p id="alertMsg">Mensagem</p>
+            <button class="alert-btn" onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo"><img src="img/PonteDourada.png"></div>
+        <div class="header-actions">
+            <span id="sectorBadge" class="user-badge">PERFIL</span>
+            <button class="btn-sair" onclick="doLogout()">↩ Sair</button>
+        </div>
+    </header>
+
+    <div class="container" id="screen-main">
+        <div class="welcome-banner">
+            <h1 id="welcomeTitle">Olá!</h1>
+            <p>Central de Atendimento – Gerenciamento e Controle</p>
+        </div>
+
+        <h2 class="section-title">Módulos do Sistema</h2>
+
+        <div class="grid-modules">            
+            <div class="card">
+                <a href="produtos.html" style="text-decoration: none; color: inherit;">
+                <div class="icon-box">📦</div>
+                <h3>PRODUTOS</h3>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="servicos.html" style="text-decoration: none; color: inherit;">
+                <div class="icon-box">🩺</div>
+                <h3>SERVIÇOS</h3>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="agendamentos.html" style="text-decoration: none; color: inherit;">
+                <div class="icon-box">📅</div>
+                <h3>AGENDAMENTOS</h3>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="fornecedores.html" style="text-decoration: none; color: inherit;">
+                <div class="icon-box">🚚</div>
+                <h3>FORNECEDORES</h3>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="profissionais.html" style="text-decoration: none; color: inherit;">
+                <div class="icon-box">👨‍⚕️</div>
+                <h3>PROFISSIONAIS</h3>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="clientes.html" style="text-decoration: none; color: inherit;">
+                <div class="icon-box">👥</div>
+                <h3>CLIENTES</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/imask@7.6.1/dist/imask.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

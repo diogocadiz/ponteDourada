@@ -1,0 +1,10 @@
+/* 1. Registrar a fonte */
+@font-face {
+    font-family: 'Uber';
+    src: url('fonts/UberMoveMedium.otf') format('opentype');
+}
+
+/* 2. Usar a fonte */
+body {
+    font-family: 'Uber', Arial, sans-serif;
+}

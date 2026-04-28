@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de Login – GEC (Gerenciamento e Controle)</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ALERT OVERLAY -->
+  <div class="alert-overlay" id="alertOverlay">
+    <div class="alert-box" id="alertBox">
+      <div class="alert-icon" id="alertIcon">⚠️</div>
+      <h3 id="alertTitle">Alerta</h3>
+      <p id="alertMsg">Mensagem</p>
+      <button class="alert-btn" onclick="closeAlert()">OK</button>
+    </div>
+  </div>
+
+  <!-- ================= LOGIN ================= -->
+  <div id="screen-login">
+    <div class="login-card">
+      <div class="login-logo">
+        <div class="logo-img"><img src="img/2.png"></div>
+        <div class="logo-subtitle">GEC · Gerenciamento e Controle</div>
+      </div>
+      <div class="login-title">Bem-vindo de volta</div>
+      <div class="login-sub">Acesse com suas credenciais</div>
+      <div class="field-group">
+        <label>Login (E-mail)</label>
+        <input type="text" id="loginEmail" placeholder="seu@email.com" autocomplete="username">
+      </div>
+      <div class="field-group">
+        <label>Senha</label>
+        <input type="password" id="loginPassword" placeholder="••••••••" autocomplete="current-password">
+      </div>
+      <button class="btn-primary" onclick="realizarLogin()">LOGAR</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/imask@7.6.1/dist/imask.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

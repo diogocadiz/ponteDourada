@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PonteDourada - Cadastro de Serviços</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ALERT OVERLAY -->
+    <div class="alert-overlay" id="alertOverlay">
+        <div class="alert-box" id="alertBox">
+            <div class="alert-icon" id="alertIcon">⚠️</div>
+            <h3 id="alertTitle">Alerta</h3>
+            <p id="alertMsg">Mensagem</p>
+            <button class="alert-btn" onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo"><img src="img/PonteDourada.png"></div>
+        <div class="header-actions">
+            <span id="sectorBadge" class="user-badge">PERFIL</span>
+            <button class="btn-sair" onclick="window.location.href='main.html'">← Voltar</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="card-form">
+            <div class="form-header">
+                <h2>Cadastro de Serviços</h2>
+                <p>Informe os dados do serviço ofertado.</p>
+            </div>
+
+            <form id="formServicos" onsubmit="submitForm(event)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nome_servico">NOME DO SERVIÇO *</label>
+                        <input type="text" id="nome_servico" placeholder="Ex: Visita Domiciliar" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="preco_base">PREÇO BASE (R$) *</label>
+                        <input type="text" id="preco_base" data-mask="money" placeholder="R$ 0,00" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="descricao">DESCRIÇÃO</label>
+                        <textarea id="descricao" placeholder="Descreva o serviço..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-cancel" onclick="clearForm('formServicos')">Cancelar</button>
+                    <button type="submit" class="btn btn-save">Salvar Cadastro</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/imask@7.6.1/dist/imask.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>initFormPage('servicos');</script>
+</body>
+</html>

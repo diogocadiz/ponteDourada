@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PonteDourada - Cadastro de Agendamentos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ALERT OVERLAY -->
+    <div class="alert-overlay" id="alertOverlay">
+        <div class="alert-box" id="alertBox">
+            <div class="alert-icon" id="alertIcon">⚠️</div>
+            <h3 id="alertTitle">Alerta</h3>
+            <p id="alertMsg">Mensagem</p>
+            <button class="alert-btn" onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo"><img src="img/PonteDourada.png"></div>
+        <div class="header-actions">
+            <span id="sectorBadge" class="user-badge">PERFIL</span>
+            <button class="btn-sair" onclick="window.location.href='main.html'">← Voltar</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="card-form">
+            <div class="form-header">
+                <h2>Cadastro de Agendamentos</h2>
+                <p>Registre um novo agendamento de atendimento.</p>
+            </div>
+
+            <form id="formAgendamentos" onsubmit="submitForm(event)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="cliente">CLIENTE *</label>
+                        <select id="cliente" required>
+                            <option value="" disabled selected>Selecione...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profissional">PROFISSIONAL *</label>
+                        <select id="profissional" required>
+                            <option value="" disabled selected>Selecione...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servico">SERVIÇO *</label>
+                        <select id="servico" required>
+                            <option value="" disabled selected>Selecione...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data_agendada">DATA AGENDADA *</label>
+                        <input type="date" id="data_agendada" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="status">STATUS *</label>
+                        <select id="status" required>
+                            <option value="" disabled selected>Selecione...</option>
+                            <option value="pendente">Pendente</option>
+                            <option value="confirmado">Confirmado</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="observacoes">OBSERVAÇÕES</label>
+                        <textarea id="observacoes" placeholder="Observações..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-cancel" onclick="clearForm('formAgendamentos')">Cancelar</button>
+                    <button type="submit" class="btn btn-save">Salvar Cadastro</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/imask@7.6.1/dist/imask.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>initFormPage('agendamentos');</script>
+</body>
+</html>
